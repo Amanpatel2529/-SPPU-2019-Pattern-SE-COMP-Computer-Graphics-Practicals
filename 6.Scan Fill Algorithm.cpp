@@ -1,13 +1,11 @@
 /* 
 Write C++ program to draw a concave polygon and fill it with desired color using scan fill algorithm.
 */
-
-
-
-#include <conio.h>
 #include <iostream>
+#include <conio.h>
 #include <graphics.h>
 #include <stdlib.h>
+
 using namespace std;
 
 class point

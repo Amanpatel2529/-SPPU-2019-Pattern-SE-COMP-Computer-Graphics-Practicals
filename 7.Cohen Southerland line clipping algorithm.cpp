@@ -3,10 +3,13 @@
 */
 
 
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
 #include<graphics.h>
 #include<math.h>
+
+using namespace std;
+
 void Window()
 {
 	line (200,200,350,200);
@@ -14,12 +17,14 @@ void Window()
 	line(200,200,200,350);
 	line(200,350,350,350);
 }
+
 void Code(char c[4],float x,float y)
 {        c[0]=(x<200)?'1':'0';
 	 c[1]=(x>350)?'1':'0';
 	 c[2]=(y<200)?'1':'0';
 	 c[3]=(y>350)?'1':'0';
 }
+
 void Clipping  (char c[],char d[],float &x,float &y,float m)
 {
 	int flag=1,i=0;
@@ -57,29 +62,33 @@ void Clipping  (char c[],char d[],float &x,float &y,float m)
 			cout<<"Line lying outside";
 	}
 }
+
 void main()
 {
-int gdriver = DETECT, gmode, errorcode;
-float x1,y1,x2,y2;
-float m;
-char c[4],d[4];
-clrscr();
-initgraph(&gdriver, &gmode, "//Turboc3//bgi");
-cout<<"Enter coordinates";
-cin>>x1>>y1>>x2>>y2;
-cout<<"Before clipping";
-Window();
-line(x1,y1,x2,y2);
-getch();
-cleardevice();
-m=float((y2-y1)/(x2-x1));
-Code(c,x1,y1);
-Code(d,x2,y2) ;
-Clipping(c,d,x1,y1,m);
-Clipping(d,c,x2,y2,m);
-cout<<"After Clipping";
-Window();
-line(x1,y1,x2,y2);
-getch();
-closegraph();
+  int gdriver = DETECT, gmode, errorcode;
+  float x1,y1,x2,y2;
+  float m;
+  char c[4],d[4];
+  clrscr();
+  initgraph(&gdriver, &gmode, "//Turboc3//bgi");
+  
+  cout<<"Enter coordinates";
+  cin>>x1>>y1>>x2>>y2;
+  cout<<"Before clipping";
+
+  Window();
+  line(x1,y1,x2,y2);
+  getch();
+  cleardevice();
+  m=float((y2-y1)/(x2-x1));
+  Code(c,x1,y1);
+  Code(d,x2,y2) ;
+  Clipping(c,d,x1,y1,m);
+  Clipping(d,c,x2,y2,m);
+
+  cout<<"After Clipping";
+  Window();
+  line(x1,y1,x2,y2);
+  getch();
+  closegraph();
 }

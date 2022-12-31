@@ -4,10 +4,11 @@ four region and draw circle,rectangle,arc
 and ellipse.
 */
 
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
 #include<graphics.h>
-#include<stdio.h>
+using namespace std;
+
 int main()
 {
 int gdriver = DETECT, gmode;

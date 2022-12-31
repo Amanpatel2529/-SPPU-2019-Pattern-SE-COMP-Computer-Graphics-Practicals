@@ -2,10 +2,12 @@
 3. Write a C++ program for drawing a simple
 object.
 */
-
+#include<iostream>
 #include<graphics.h>
 #include<conio.h>
-#include<stdio.h>
+
+using namespace std;
+
 void main()
 {
 int gdriver=DETECT,gmode;

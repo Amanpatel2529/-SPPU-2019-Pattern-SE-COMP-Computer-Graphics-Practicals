@@ -4,9 +4,11 @@ DDA and Bresahnams Line Drawing Algorithm
 */
 
 
-#include<iostream.h>
+#include<iostream>
 #include<graphics.h>
 #include<math.h>
+
+using namespace std;
 
 int sign(int x)
 {
@@ -17,6 +19,7 @@ return 1;
 else
 return 0;
 }
+
 void bline(int x1,int y1,int x2,int y2,int col)
 {
 int dx,dy,e,x,y,i=1;

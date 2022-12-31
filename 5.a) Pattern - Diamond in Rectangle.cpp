@@ -3,10 +3,13 @@
 following pattern(diamond in rectangle)
 */
 CODE:
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
 #include<graphics.h>
 #include<math.h>
+
+using name space std;
+
 int sign(int x)
 {
 if(x<0)

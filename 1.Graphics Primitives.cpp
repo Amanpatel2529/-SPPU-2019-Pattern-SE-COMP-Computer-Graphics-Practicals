@@ -3,10 +3,12 @@
 primitives and color it.
 */
 
-#include<iostream.h>
+#include<iostream>
 #include<conio.h>
 #include<graphics.h>
-#include<stdio.h>
+
+using namespace std;
+
 int main()
 {
 int gdriver = DETECT, gmode;
